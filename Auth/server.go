@@ -19,7 +19,7 @@ var format = logging.MustStringFormatter(
 
 const srvAddr = "127.0.0.1:16000"
 
-func StartServer() {
+func StartSer+ver() {
 	backend1 := logging.NewLogBackend(os.Stderr, "", 0)
 	backend2 := logging.NewLogBackend(os.Stderr, "", 0)
 

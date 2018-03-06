@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b7ef18c-cba2-419c-b776-8103b6693a3e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Auth/AuthDB.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Auth/AuthHandlers.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Auth/Base.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Auth/Entities.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Auth/Errors.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Auth/Router.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Auth/Token.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Auth/Util.go" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Auth/server.go" afterPath="$PROJECT_DIR$/Auth/server.go" />
-      <change beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -36,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Auth/server.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="390">
+              <caret line="26" column="68" lean-forward="true" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
               <folding>
                 <element signature="e#14#104#0" expanded="true" />
               </folding>
@@ -161,8 +150,8 @@
         <option value="$PROJECT_DIR$/Auth/Util.go" />
         <option value="$PROJECT_DIR$/Auth/AuthHandlers.go" />
         <option value="$PROJECT_DIR$/Auth/Base.go" />
-        <option value="$PROJECT_DIR$/Auth/server.go" />
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/Auth/server.go" />
       </list>
     </option>
   </component>
@@ -449,22 +438,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="e#14#104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#14#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auth/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="68" lean-forward="true" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+          <folding>
+            <element signature="e#14#104#0" expanded="true" />
           </folding>
         </state>
       </provider>
