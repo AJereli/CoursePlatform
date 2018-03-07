@@ -1,23 +1,17 @@
-package Auth
+package Base
 
 import (
-	"context"
 	"os"
-	"os/signal"
-	"time"
-
 	"github.com/op/go-logging"
-
-	"net/http"
 )
 
-var log = logging.MustGetLogger("Auth Logger")
+var Log = logging.MustGetLogger("Logger")
 
 var format = logging.MustStringFormatter(
 	`%{color}%{time:15:04:05.000} %{shortfunc} ▶ %{level:.4s} %{id:03x}%{color:reset} %{message}`,
 )
 
-func setupConfig (){
+func SetupLoggerConfig(){
 	backend1 := logging.NewLogBackend(os.Stderr, "", 0)
 	backend2 := logging.NewLogBackend(os.Stderr, "", 0)
 
@@ -34,40 +28,4 @@ func setupConfig (){
 	logging.SetBackend(backend1Leveled, backend2Formatter)
 }
 
-const srvAddr = "127.0.0.1:16000"
 
-func StartServer() {
-	setupConfig()
-
-	log.Notice("AUTH SERVER start\nPress Ctrl+C to shutdown")
-	router := InitRouter()
-	srv := &http.Server{
-		Handler:      router,
-		Addr:         srvAddr,
-		WriteTimeout: 15 * time.Second,
-		ReadTimeout:  15 * time.Second,
-	}
-
-	go func() {
-		if err := srv.ListenAndServe(); err != nil {
-			log.Info(err)
-		}
-	}()
-
-	c := make(chan os.Signal, 1)
-
-	signal.Notify(c, os.Interrupt)
-
-	<-c
-
-	var wait time.Duration
-	wait = time.Second * 15
-	ctx, cancel := context.WithTimeout(context.Background(), wait)
-	defer cancel()
-
-	srv.Shutdown(ctx)
-
-	log.Notice("auth shutting down")
-	os.Exit(0)
-
-}

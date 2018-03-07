@@ -1,4 +1,4 @@
-package Auth
+package Base
 
 
 import (
@@ -39,7 +39,7 @@ func ParseToken(tokenString string)  TokenInfo {
 		tokenInfo := TokenInfo {ISS: claims["iss"].(string), UserName: claims["user_name"].(string), Rang: claims["rang"].(int), ExpTime: claims["exp"].(float64), Nbf:claims["nbf"].(float64)}
 		return tokenInfo
 	} else {
-		log.Error(err.Error())
+		Log.Error(err.Error())
 		panic(err)
 	}
 

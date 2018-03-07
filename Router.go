@@ -1,9 +1,10 @@
-package Auth
+package main
 
 import (
 	"github.com/gorilla/mux"
 	"net/http"
 	"time"
+	"CoursePlatform/Base"
 )
 
 type Route struct{
@@ -18,17 +19,17 @@ type HandlFunc func(w http.ResponseWriter, r *http.Request)
 
 var routes = Routes{
 	Route{
-		"LogIn",
-		"GET",
-		"/login",
-		Login,
+		"AddCourse",
+		"POST",
+		"/course/add",
+		AddCourse,
 
 	},
 	Route{
-		"Registration",
+		"GetAllCourses",
 		"GET",
-		"/registration",
-		Registration,
+		"/course/getAll",
+		GetCourses,
 	},
 }
 
@@ -56,7 +57,7 @@ func WraperLogger(inner http.Handler, name string) http.Handler {
 
 		inner.ServeHTTP(w, r)
 
-		log.Info(
+		Base.Log.Info(
 			"%s\t%s\t%s\t%s",
 			r.Method,
 			r.RequestURI,

@@ -1,17 +1,10 @@
 package Auth
 
 import (
-	"time"
 	"net/url"
 	"reflect"
-)
 
-func (token TokenInfo) CheckExpTime ()bool {
-	if time.Now().Unix() >= int64(token.ExpTime) {
-		return false
-	}
-	return true
-}
+)
 
 func checkAuthParams (params url.Values) bool{
 	isOk := true
@@ -24,8 +17,8 @@ func checkAuthParams (params url.Values) bool{
 
 	k1, k2 := keys[0].String(), keys[1].String()
 
-	if k1 != "user_name" || k2 != "password"{
-		isOk = false
+	if k1 != "name" || k2 != "password"{
+		return false
 	}
 
 	if !isOk{

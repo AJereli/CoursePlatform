@@ -1,20 +1,17 @@
 package Auth
 
 import (
-	_"awesomeProject/MiddelewareChain"
 	"net/http"
 	"database/sql"
-	"awesomeProject/Auth"
 	"io/ioutil"
 	"io"
+	_"github.com/go-sql-driver/mysql"
 	"encoding/json"
-)
+	"CoursePlatform/Base"
+	)
 
 
-const (
-	AppName = "CoursePlatform"
-	ExpiresTime = 60 * 60 * 24 * 15
-)
+
 
 
 func Registration (w http.ResponseWriter, r * http.Request){
@@ -24,48 +21,48 @@ func Registration (w http.ResponseWriter, r * http.Request){
 
 
 	if !checkAuthParams(params){
-		wrongParamsApiErr.send(w)
+		Base.WrongParamsApiErr.Send(w)
 		return
 	}
 
-	uID, userPass := params["user_name"][0], params["password"][0]
+	uID, userPass := params["name"][0], params["password"][0]
 
-	db, err := sql.Open("mysql", DBMetaAuth.GetDataSourceName())
-	checkErr(err)
+	db, err := sql.Open("mysql", DBMetaAuth.GetDataSourceName(DBAddress))
+	Base.CheckErr(err)
 
 	err = db.Ping()
-	checkErr(err)
+	Base.CheckErr(err)
 
 	var userNameIsExists bool
-	db.QueryRow("SELECT EXISTS(SELECT 1 FROM users WHERE userid = ?)", uID).Scan(&userNameIsExists)
+	db.QueryRow("SELECT EXISTS(SELECT 1 FROM user WHERE name = ?)", uID).Scan(&userNameIsExists)
 
 	if userNameIsExists {
-		notExistUserNameApiErr.send(w)
+		Base.NotExistUserNameApiErr.Send(w)
 		db.Close()
 		return
 	}
 
-	accessToken := Auth.CreateToken(uID)
+	accessToken := Base.CreateToken(uID)
 
-	stmt, err := db.Prepare("INSERT users SET userid=?, password=?, access_token=?")
-	checkErr(err)
+	stmt, err := db.Prepare("INSERT user SET name=?, password=?, access_token=?")
+	Base.CheckErr(err)
 
 	res, err := stmt.Exec(uID, userPass, accessToken)
-	checkErr(err)
+	Base.CheckErr(err)
 
 	log.Info(res)
 
 	db.Close()
 
-	jsonToken := Auth.JSONToken{AccessToken: accessToken}
+	jsonToken := Base.JSONToken{AccessToken: accessToken}
 
-	SendJson(w, jsonToken)
+	Base.SendJson(w, jsonToken)
 }
 
 func Login (w http.ResponseWriter, r * http.Request){
-	var user User
+	var user Base.User
 
-	body, err := ioutil.ReadAll(io.LimitReader(r.Body, LimitJSONRead))
+	body, err := ioutil.ReadAll(io.LimitReader(r.Body, Base.LimitJSONRead))
 
 	if err != nil {
 		panic(err)
@@ -77,23 +74,24 @@ func Login (w http.ResponseWriter, r * http.Request){
 
 
 	if err := json.Unmarshal(body, &user); err != nil {
-		unprocessableEntityApiErr.send(w)
+		Base.UnprocessableEntityApiErr.Send(w)
 	}
 
 	var truePassword, trueToken string
 
-	db, err := sql.Open("mysql", DBMetaAuth.GetDataSourceName())
-	checkErr(err)
+	db, err := sql.Open("mysql", DBMetaAuth.GetDataSourceName(DBAddress))
+	Base.CheckErr(err)
 
-	db.QueryRow("SELECT password FROM users WHERE userid = ?", user.UserName).Scan(&truePassword)
+	db.QueryRow("SELECT password FROM user WHERE name = ?", user.UserName).Scan(&truePassword)
 	defer db.Close()
 
 	if user.Password == truePassword{
-		trueToken = Auth.CreateToken(user.UserName)
-		SendJson(w, Auth.JSONToken{AccessToken: trueToken})
-		db.Query("UPDATE users SET access_token = ? WHERE userid = ?", trueToken, user.UserName)
+		trueToken = Base.CreateToken(user.UserName)
+		Base.SendJson(w, Base.JSONToken{AccessToken: trueToken})
+		db.Query("UPDATE user SET access_token = ? WHERE name = ?", trueToken, user.UserName)
 	} else {
-		loginApiErr.send(w)
+		Base.LoginApiErr.Send(w)
 	}
 
 }
+

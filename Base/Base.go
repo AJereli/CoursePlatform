@@ -1,11 +1,11 @@
-package Auth
+package Base
 
 
 import (
 	"encoding/json"
 	"io"
 	"io/ioutil"
-	"time"
+
 	"net/http"
 	_"github.com/gorilla/mux"
 )
@@ -15,6 +15,10 @@ const(
 )
 
 
+const (
+	AppName = "CoursePlatform"
+	ExpiresTime = 60 * 60 * 24 * 15
+)
 
 func SendJson (w http.ResponseWriter, v interface{}){
 	w.WriteHeader(http.StatusOK)
@@ -44,18 +48,3 @@ func UnmarshalRequest (r * http.Request, v interface{}) error {
 }
 
 
-func WraperLogger(inner http.Handler, name string) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		start := time.Now()
-
-		inner.ServeHTTP(w, r)
-
-		log.Info(
-			"%s\t%s\t%s\t%s",
-			r.Method,
-			r.RequestURI,
-			name,
-			time.Since(start),
-		)
-	})
-}

@@ -1,8 +1,9 @@
-package Auth
+package main
+
 
 import (
 
-"CoursePlatform/Base"
+	"CoursePlatform/Base"
 )
 
 const (
