@@ -83,4 +83,27 @@ func GetCourses (w http.ResponseWriter, r * http.Request){
 	Base.SendJson(w, msgs)
 }
 
+func AddCourseTask (w http.ResponseWriter, r * http.Request){
+
+}
+
+func GetCourseTasks (w http.ResponseWriter, r * http.Request){
+
+}
+
+func AddLection (w http.ResponseWriter, r * http.Request){
+
+}
+
+func GetCourseLections (w http.ResponseWriter, r * http.Request){
+
+}
+
+func AddLectionTask (w http.ResponseWriter, r * http.Request){
+
+}
+
+func GetLectionTasks (w http.ResponseWriter, r * http.Request){
+
+}
 

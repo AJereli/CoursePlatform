@@ -31,6 +31,42 @@ var routes = Routes{
 		"/course/getAll",
 		GetCourses,
 	},
+	Route{
+		"GetAllCourseTasks",
+		"GET",
+		"/course/task/getAll",
+		GetCourseTasks,
+	},
+	Route{
+		"AddCourseTask",
+		"POST",
+		"/course/task/add",
+		AddCourseTask,
+	},
+	Route{
+		"AddLection",
+		"POST",
+		"/lection/add",
+		AddLection,
+	},
+	Route{
+		"GetCourseLections",
+		"GET",
+		"/lection/getAll",
+		GetCourseLections,
+	},
+	Route{
+		"GetAllLectionTasks",
+		"GET",
+		"/lection/task/getAll",
+		GetLectionTasks,
+	},
+	Route{
+		"AddLectionTask",
+		"POST",
+		"/lection/task/add",
+		AddLectionTask,
+	},
 }
 
 
