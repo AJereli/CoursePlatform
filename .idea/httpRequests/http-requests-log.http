@@ -1,0 +1,9 @@
+POST http://localhost:16001/course/add
+Content-Type: application/json
+
+{"name" : "CourseTest", "in_skills" : ["skill1", "skiil2"], "out_skills" : ["oskil", "oskill2", "0skill3"] }
+
+<> 2018-03-12T054239.201.json
+
+###
+

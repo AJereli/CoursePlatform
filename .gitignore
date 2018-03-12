@@ -14,5 +14,5 @@
 .glide/
 
 # MySQL files
-*.sql
-*.mwb
+#*.sql
+#*.mwb

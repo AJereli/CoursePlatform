@@ -23,7 +23,6 @@ var routes = Routes{
 		"POST",
 		"/course/add",
 		AddCourse,
-
 	},
 	Route{
 		"GetAllCourses",
@@ -67,8 +66,31 @@ var routes = Routes{
 		"/lection/task/add",
 		AddLectionTask,
 	},
+	Route{
+		"AddLectionTaskSolution",
+		"POST",
+		"/lection/solution/add",
+		AddLectionTaskSolution,
+	},
+	Route{
+		"GetLectionTaskSolutions",
+		"GET",
+		"/lection/solution/getAll",
+		GetLectionTaskSolutions,
+	},
+	Route{
+		"DeleteLectionTaskSolution",
+		"DELETE",
+		"/lection/solution/delete",
+		DeleteLectionTaskSolution,
+	},
+	Route{
+		"EstimateTaskSolution",
+		"PUT",
+		"/lection/solution/estimate",
+		EstimateTaskSolution,
+	},
 }
-
 
 func InitRouter () *mux.Router{
 	router := mux.NewRouter().StrictSlash(true)

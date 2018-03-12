@@ -42,21 +42,17 @@ func Registration (w http.ResponseWriter, r * http.Request){
 		return
 	}
 
-	accessToken := Base.CreateToken(uID)
-
-	stmt, err := db.Prepare("INSERT user SET name=?, password=?, access_token=?")
+	stmt, err := db.Prepare("INSERT user SET name=?, password=?")
 	Base.CheckErr(err)
 
-	res, err := stmt.Exec(uID, userPass, accessToken)
+	res, err := stmt.Exec(uID, userPass)
 	Base.CheckErr(err)
 
 	log.Info(res)
 
 	db.Close()
 
-	jsonToken := Base.JSONToken{AccessToken: accessToken}
-
-	Base.SendJson(w, jsonToken)
+	Base.SuccessApiStatus.Send(w)
 }
 
 func Login (w http.ResponseWriter, r * http.Request){

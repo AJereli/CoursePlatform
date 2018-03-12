@@ -14,28 +14,51 @@ const (
 
 	loginErrCode = 102
 
+	someFieldIsEmptyCode = 140
 
+	courseNameExistCode = 150
+	courseNotFoundCode = 151
 
 	tokenTimeOutCode = 160
 
 
+
+	taskAlreadyCreatedCode = 170
+
+	lectionAlreadyCreatedCode = 180
+	lectionNotExistsCode = 181
+
+
+	answerExists = 190
+
 	unprocessableEntityCode = 422
-
-
-	courseNameExistCode = 150
 )
 
+
+
+//ERRORS
 var (
-	WrongParamsApiErr         = ApiError{wrongRegParmsCode, wrongParams}
-	NotExistUserNameApiErr    = ApiError{userNameNotExistsCode, "Sorry, this user name is not available"}
-	LoginApiErr               = ApiError{loginErrCode, "Wrong login or password"}
+	WrongParamsApiErr            = ApiError{wrongRegParmsCode, wrongParams}
+	NotExistUserNameApiErr       = ApiError{userNameNotExistsCode, "Sorry, this user name is not available"}
+	LoginApiErr                  = ApiError{loginErrCode, "Wrong login or password"}
 
-	TokenTimeOutApiErr	      = ApiError{tokenTimeOutCode, "Access token time out"}
+	TokenTimeOutApiErr	         = ApiError{tokenTimeOutCode, "Access token time out"}
 
-	UnprocessableEntityApiErr = ApiError{unprocessableEntityCode, "Unprocessablee entity"}
+	UnprocessableEntityApiErr    = ApiError{unprocessableEntityCode, "Unprocessablee entity"}
 
-	CourseNameNotExistApiErr  = ApiError{courseNameExistCode, "Course with this name already created"}
+	SomeFieldIsEmptyApiErr 		 = ApiError{someFieldIsEmptyCode, "Some field is empty!"}
+
+	CourseNameNotExistApiErr     = ApiError{courseNameExistCode, "Course with this name already created"}
+	CourseNotFoundApiErr         = ApiError{courseNotFoundCode, "Course with this ID not found!"}
+
+	TaskAlreadyCreatedApiErr     = ApiError{taskAlreadyCreatedCode, "This task already created!"}
+
+	TaskAnswerExistsApiErr       = ApiError{answerExists, "You have already given such a solution to the problem"}
+
+	LectionAlreadyCreatedApiErr  = ApiError{lectionAlreadyCreatedCode, "Lection with this name already created!"}
+	LectionNotExistsApiErr       = ApiError{lectionNotExistsCode, "Lection with this id not exists"}
 )
+
 
 type ApiError struct {
 	ErrorCode int `json:"error_code"`
