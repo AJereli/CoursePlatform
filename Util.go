@@ -6,12 +6,12 @@ import (
 	"strings"
 )
 
-func (course * Course) PopulateCourseFromRow(rows *sql.Rows) {
+func (this * Course) Populate(rows *sql.Rows) {
 	var inSkill, outSkill string
 
-	err := rows.Scan(&course.Id, &course.Name, &inSkill, &outSkill)
-	course.InSkills = strings.Split(inSkill, "\n")
-	course.OutSkill = strings.Split(outSkill, "\n")
+	err := rows.Scan(&this.Id, &this.Name, &inSkill, &outSkill)
+	this.InSkills = strings.Split(inSkill, "\n")
+	this.OutSkill = strings.Split(outSkill, "\n")
 	Base.CheckErr(err)
 }
 
@@ -20,16 +20,16 @@ func GetCoursesFromRows(rows * sql.Rows ) []Course{
 
 	for rows.Next(){
 		var course Course
-		course.PopulateCourseFromRow(rows)
+		course.Populate(rows)
 		courses = append(courses, course)
 	}
 	return courses
 }
 
 
-func (lectionTask * LectionTask) PopulateLectionTaskFromRow(rows *sql.Rows) {
-	err := rows.Scan(&lectionTask.Id, &lectionTask.Task, &lectionTask.Answer,
-		&lectionTask.IsTest, &lectionTask.TestAns, &lectionTask.LectionId, &lectionTask.CourseId)
+func (this * LectionTask) Populate(rows *sql.Rows) {
+	err := rows.Scan(&this.Id, &this.Task, &this.Answer,
+		&this.IsTest, &this.TestAns, &this.LectionId, &this.CourseId)
 	Base.CheckErr(err)
 }
 
@@ -38,15 +38,15 @@ func GetLectionTasksFromRows(rows * sql.Rows ) []LectionTask{
 
 	for rows.Next(){
 		var task LectionTask
-		task.PopulateLectionTaskFromRow(rows)
+		task.Populate(rows)
 		lts = append(lts, task)
 	}
 	return lts
 }
 
 
-func (courseTask * CourseTask) PopulateCourseTaskFromRow(rows *sql.Rows) {
-	err := rows.Scan(&courseTask.Id, &courseTask.Task, &courseTask.Answer)
+func (this * CourseTask) Populate(rows *sql.Rows) {
+	err := rows.Scan(&this.Id, &this.Task, &this.Answer)
 	Base.CheckErr(err)
 }
 
@@ -55,18 +55,23 @@ func GetCourseTasksFromRows(rows * sql.Rows ) []CourseTask{
 
 	for rows.Next(){
 		var task CourseTask
-		task.PopulateCourseTaskFromRow(rows)
+		task.Populate(rows)
 		ct = append(ct, task)
 	}
 	return ct
 }
 
-func (lection * Lection) PopulateLectionFromRow(rows *sql.Rows) {
+func (this * Lection) Populate(rows *sql.Rows) {
 	var notes string
 	//TODO imgs
-	err := rows.Scan(&lection.Id, &lection.Name, &lection.Title, &lection.Information, &notes, &lection.CourseId)
-	lection.Notes = strings.Split(notes, "\n")
+	err := rows.Scan(&this.Id, &this.Name, &this.Title, &this.Information, &notes, &this.CourseId)
+	this.Notes = strings.Split(notes, "\n")
 
+	Base.CheckErr(err)
+}
+
+func (this *LectionTaskSolution) Populate (rows *sql.Rows){
+	err := rows.Scan(&this.Id, &this.Mark, &this.UserId, &this.LectionId, &this.LectionTaskId, &this.CourseId, &this.Answer)
 	Base.CheckErr(err)
 }
 
@@ -75,7 +80,7 @@ func GetLectionFromRows(rows * sql.Rows ) []Lection{
 
 	for rows.Next(){
 		var lection Lection
-		lection.PopulateLectionFromRow(rows)
+		lection.Populate(rows)
 		lections = append(lections, lection)
 	}
 	return lections

@@ -36,9 +36,10 @@ func Registration (w http.ResponseWriter, r * http.Request){
 	var userNameIsExists bool
 	db.QueryRow("SELECT EXISTS(SELECT 1 FROM user WHERE name = ?)", uID).Scan(&userNameIsExists)
 
+	defer db.Close()
+
 	if userNameIsExists {
 		Base.NotExistUserNameApiErr.Send(w)
-		db.Close()
 		return
 	}
 
@@ -49,8 +50,6 @@ func Registration (w http.ResponseWriter, r * http.Request){
 	Base.CheckErr(err)
 
 	log.Info(res)
-
-	db.Close()
 
 	Base.SuccessApiStatus.Send(w)
 }
@@ -77,14 +76,16 @@ func Login (w http.ResponseWriter, r * http.Request){
 
 	db, err := sql.Open("mysql", DBMetaAuth.GetDataSourceName(DBAddress))
 	Base.CheckErr(err)
+	defer db.Close()
 
 	db.QueryRow("SELECT password FROM user WHERE name = ?", user.UserName).Scan(&truePassword)
-	defer db.Close()
 
 	if user.Password == truePassword{
 		trueToken = Base.CreateToken(user.UserName)
-		Base.SendJson(w, Base.JSONToken{AccessToken: trueToken})
+
 		db.Query("UPDATE user SET access_token = ? WHERE name = ?", trueToken, user.UserName)
+
+		Base.UnmarshalAndSend(w, Base.JSONToken{AccessToken: trueToken})
 	} else {
 		Base.LoginApiErr.Send(w)
 	}

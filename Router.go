@@ -67,16 +67,23 @@ var routes = Routes{
 		AddLectionTask,
 	},
 	Route{
+		"GetLectionTask",
+		"GET",
+		"/lection/getById",
+		GetLectionTaskById,
+	},
+	Route{
 		"AddLectionTaskSolution",
 		"POST",
 		"/lection/solution/add",
 		AddLectionTaskSolution,
 	},
+
 	Route{
-		"GetLectionTaskSolutions",
+		"GetLectionTaskSolution",
 		"GET",
-		"/lection/solution/getAll",
-		GetLectionTaskSolutions,
+		"/lection/solution/getSolution",
+		GetLectionTaskSolution,
 	},
 	Route{
 		"DeleteLectionTaskSolution",

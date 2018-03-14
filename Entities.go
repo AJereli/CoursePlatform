@@ -27,8 +27,8 @@ type Lection struct {
 	CourseId int `json:"course_id"`
 }
 
-func (self * Lection) IsReady () bool {
-	return self.Name != "" && self.Title != "" && self.Information != "" && self.CourseId != 0
+func (this * Lection) IsReady () bool {
+	return this.Name != "" && this.Title != "" && this.Information != "" && this.CourseId != 0
 }
 
 type LectionTask struct {
@@ -43,9 +43,22 @@ type LectionTask struct {
 
 type LectionTaskSolution struct {
 	Id int `json:"id"`
+	Mark int `json:"mark"`
 	Answer string `json:"answer"`
 	UserId int `json:"user_id"`
 	LectionId int  `json:"lection_id"`
 	CourseId int `json:"course_id"`
 	LectionTaskId int `json:"task_id"`
+}
+
+
+type Comment struct {
+	Id int `json:"id"`
+	Comment string `json:"comment"`
+	Date string `json:"date"`
+	UserId int `json:"user_id"`
+	UserLectionTaskId int  `json:"UserLectionTask_id"`
+	UserLectionTaskLectionId int `json:"UserLectionTask_Lection_id"`
+	UserLectionTaskCourseId int `json:"UserLectionTask_Course_id"`
+	UserLectionTask_LectionTask_id int `json:"UserLectionTask_LectionTask_id"`
 }

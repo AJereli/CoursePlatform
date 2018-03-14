@@ -58,7 +58,7 @@ func GetCourses(w http.ResponseWriter, r *http.Request) {
 	courses := GetCoursesFromRows(rows)
 	defer rows.Close()
 
-	Base.SendJson(w, courses)
+	Base.UnmarshalAndSend(w, courses)
 }
 
 func AddCourseTask(w http.ResponseWriter, r *http.Request) {
@@ -104,7 +104,7 @@ func AddCourseTask(w http.ResponseWriter, r *http.Request) {
 	}
 	db.QueryRow("SELECT id FROM CourseTask WHERE task = ?", courseTask.Task).Scan(&taskId)
 
-	Base.SendJson(w, Result{TaskId: taskId})
+	Base.UnmarshalAndSend(w, Result{TaskId: taskId})
 
 }
 
@@ -142,7 +142,7 @@ func GetCourseTasks(w http.ResponseWriter, r *http.Request) {
 	}
 	defer rows.Close()
 
-	Base.SendJson(w, courseTasks)
+	Base.UnmarshalAndSend(w, courseTasks)
 
 }
 
@@ -152,6 +152,7 @@ func AddLection(w http.ResponseWriter, r *http.Request) {
 	err := Base.UnmarshalRequest(r, &lection)
 	if err != nil {
 		Base.UnprocessableEntityApiErr.Send(w)
+		return
 	}
 
 	if !lection.IsReady() {
@@ -189,7 +190,7 @@ func AddLection(w http.ResponseWriter, r *http.Request) {
 	}
 	db.QueryRow("SELECT id FROM Lection WHERE name = ?", lection.Name).Scan(&lectionId)
 
-	Base.SendJson(w, Result{TaskId: lectionId})
+	Base.UnmarshalAndSend(w, Result{TaskId: lectionId})
 }
 
 func GetCourseLections(w http.ResponseWriter, r *http.Request) {
@@ -224,7 +225,7 @@ func GetCourseLections(w http.ResponseWriter, r *http.Request) {
 
 	defer rows.Close()
 
-	Base.SendJson(w, lections)
+	Base.UnmarshalAndSend(w, lections)
 
 }
 
@@ -271,7 +272,7 @@ func AddLectionTask(w http.ResponseWriter, r *http.Request) {
 	}
 	db.QueryRow("SELECT id FROM CourseTask WHERE task = ?", lectionTask.Task).Scan(&taskId)
 
-	Base.SendJson(w, Result{TaskId: taskId})
+	Base.UnmarshalAndSend(w, Result{TaskId: taskId})
 }
 
 func GetLectionTasks(w http.ResponseWriter, r *http.Request) {
@@ -302,7 +303,7 @@ func GetLectionTasks(w http.ResponseWriter, r *http.Request) {
 
 	defer rows.Close()
 
-	Base.SendJson(w, lectionTasks)
+	Base.UnmarshalAndSend(w, lectionTasks)
 }
 
 
@@ -356,17 +357,108 @@ func AddLectionTaskSolution(w http.ResponseWriter, r * http.Request){
 	}
 	db.QueryRow("SELECT id FROM UserLectionTask WHERE answer = ? AND user_id = ?", solution.Answer, solution.UserId).Scan(&solutionId)
 
-	Base.SendJson(w, Result{TaskId: solutionId, Mark: mark})
+	Base.UnmarshalAndSend(w, Result{TaskId: solutionId, Mark: mark})
 }
 
-func GetLectionTaskSolutions(w http.ResponseWriter, r * http.Request){
 
+func GetLectionTaskSolution(w http.ResponseWriter, r * http.Request){
+	type LectionTaskSolutionId struct {
+		Id int `json:"lection_task_solution_id"`
+	}
+
+	var solutionId LectionTaskSolutionId
+	Base.UnmarshalRequest(r, &solutionId)
+
+	var lectionTaskExists bool
+	db, err := sql.Open("mysql", DBMetaAuth.GetDataSourceName(DBAddress))
+	Base.CheckErr(err)
+	defer db.Close()
+
+	db.QueryRow("SELECT EXISTS(SELECT 1 FROM UserLectionTask WHERE id = ?)", solutionId.Id).Scan(&lectionTaskExists)
+
+	if !lectionTaskExists {
+		Base.TaskNotExistsApiErr.Send(w)
+		db.Close()
+		return
+	}
+
+	rows, err := db.Query("SELECT id, mark, user_id, LectionTask_id, LectionTask_Lection_id, LectionTask_Lection_Course_id, answer FROM UserLectionTask WHERE id=?", solutionId.Id)
+	rows.Next()
+	defer rows.Close()
+
+	Base.CheckErr(err)
+	var lectionTask LectionTaskSolution
+	lectionTask.Populate(rows)
+
+	Base.UnmarshalAndSend(w, lectionTask)
 }
 
 func DeleteLectionTaskSolution (w http.ResponseWriter, r * http.Request){
-
+	//TODO empty func
 }
 
 func EstimateTaskSolution(w http.ResponseWriter, r * http.Request){
+	type LectionTaskSolutionId struct {
+		Id int `json:"lection_task_solution_id"`
+		Mark int `json:"mark"`
+	}
 
+	var solutionEstimate LectionTaskSolutionId
+	Base.UnmarshalRequest(r, &solutionEstimate)
+
+	var lectionTaskExists bool
+	db, err := sql.Open("mysql", DBMetaAuth.GetDataSourceName(DBAddress))
+	Base.CheckErr(err)
+	defer db.Close()
+
+	db.QueryRow("SELECT EXISTS(SELECT 1 FROM UserLectionTask WHERE id = ?)", solutionEstimate.Id).Scan(&lectionTaskExists)
+
+	if !lectionTaskExists {
+		Base.TaskNotExistsApiErr.Send(w)
+		db.Close()
+		return
+	}
+
+	stmt, err := db.Prepare("UPDATE UserLectionTask SET mark = ? WHERE id = ?")
+	Base.CheckErr(err)
+
+	res, err := stmt.Exec(solutionEstimate.Mark, solutionEstimate.Id)
+	Base.CheckErr(err)
+	log.Info(res)
+	Base.SuccessApiStatus.Send(w)
 }
+
+
+func GetLectionTaskById(w http.ResponseWriter, r * http.Request){
+	type LectionTaskId struct {
+		Id int `json:"lection_task_id"`
+	}
+
+	var lectionTaskId LectionTaskId
+	Base.UnmarshalRequest(r, &lectionTaskId)
+
+	var lectionTaskExists bool
+	db, err := sql.Open("mysql", DBMetaAuth.GetDataSourceName(DBAddress))
+	Base.CheckErr(err)
+	defer db.Close()
+
+	db.QueryRow("SELECT EXISTS(SELECT 1 FROM LectionTask WHERE id = ?)", lectionTaskId.Id).Scan(&lectionTaskExists)
+
+	if !lectionTaskExists {
+		Base.TaskNotExistsApiErr.Send(w)
+		db.Close()
+		return
+	}
+
+	rows, err := db.Query("SELECT id, task, answer, isTest, testAns, Lection_id, Lection_Course_id FROM LectionTask WHERE id=?", lectionTaskId.Id)
+	rows.Next()
+	defer rows.Close()
+
+	Base.CheckErr(err)
+	var lectionTask LectionTask
+	lectionTask.Populate(rows)
+
+	Base.UnmarshalAndSend(w, lectionTask)
+}
+
+

@@ -24,6 +24,7 @@ const (
 
 
 	taskAlreadyCreatedCode = 170
+	taskNotExistsCode = 171
 
 	lectionAlreadyCreatedCode = 180
 	lectionNotExistsCode = 181
@@ -52,6 +53,7 @@ var (
 	CourseNotFoundApiErr         = ApiError{courseNotFoundCode, "Course with this ID not found!"}
 
 	TaskAlreadyCreatedApiErr     = ApiError{taskAlreadyCreatedCode, "This task already created!"}
+	TaskNotExistsApiErr			 = ApiError{taskNotExistsCode, "Task with this id is not exists"}
 
 	TaskAnswerExistsApiErr       = ApiError{answerExists, "You have already given such a solution to the problem"}
 

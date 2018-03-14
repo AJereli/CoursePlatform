@@ -20,7 +20,7 @@ const (
 	ExpiresTime = 60 * 60 * 24 * 15
 )
 
-func SendJson (w http.ResponseWriter, v interface{}){
+func UnmarshalAndSend(w http.ResponseWriter, v interface{}){
 	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	if err := json.NewEncoder(w).Encode(v); err != nil {

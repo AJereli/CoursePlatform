@@ -17,12 +17,25 @@ type TestRequest struct {
 	Url string
 }
 
-func (testReq * TestRequest) MakeRequest(t *testing.T) (*http.Response, error){
+const (
+	ApiPrefix = "http://localhost:16001"
+)
+
+
+func (this * TestRequest) MakeTest (t * testing.T){
+	res, err := this.makeRequest(t)
+
+	if err != nil {
+		t.Error(err)
+	}
+	PrintBody(res, t)
+}
+
+func (testReq * TestRequest) makeRequest(t *testing.T) (*http.Response, error){
 	var request *http.Request
 	var err error
 	if testReq.JSON != ""{
 		reader := strings.NewReader(testReq.JSON)
-
 		request, err = http.NewRequest(testReq.Method, testReq.Url, reader)
 	}else {
 		request, err = http.NewRequest(testReq.Method, testReq.Url, nil)
