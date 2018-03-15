@@ -78,10 +78,10 @@ func Login (w http.ResponseWriter, r * http.Request){
 	Base.CheckErr(err)
 	defer db.Close()
 
-	db.QueryRow("SELECT password FROM user WHERE name = ?", user.UserName).Scan(&truePassword)
+	db.QueryRow("SELECT password, id, rang FROM user WHERE name = ?", user.UserName).Scan(&truePassword, &user.UserId, &user.Rang)
 
 	if user.Password == truePassword{
-		trueToken = Base.CreateToken(user.UserName)
+		trueToken = Base.CreateToken(user)
 
 		db.Query("UPDATE user SET access_token = ? WHERE name = ?", trueToken, user.UserName)
 

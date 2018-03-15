@@ -97,6 +97,12 @@ var routes = Routes{
 		"/lection/solution/estimate",
 		EstimateTaskSolution,
 	},
+	Route{
+		"AddComment",
+		"POST",
+		"/lection/solution/comment/add",
+		AddComment,
+	},
 }
 
 func InitRouter () *mux.Router{

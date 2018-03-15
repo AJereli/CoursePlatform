@@ -9,6 +9,7 @@ import (
 	"database/sql"
 	"github.com/prometheus/common/log"
 	"strconv"
+	"time"
 )
 
 func AddCourse(w http.ResponseWriter, r *http.Request) {
@@ -461,4 +462,65 @@ func GetLectionTaskById(w http.ResponseWriter, r * http.Request){
 	Base.UnmarshalAndSend(w, lectionTask)
 }
 
+
+
+func AddComment(w http.ResponseWriter, r * http.Request){
+	type Required struct {
+		AccessToken string `json:"access_token"`
+		Comment string `json:"comment"`
+		UserLectionTaskId int `json:"UserLectionTask_id"`
+	}
+
+	var comment Comment
+	var req Required
+
+
+	err := Base.UnmarshalRequest(r, &req)
+	if err != nil {
+		Base.UnprocessableEntityApiErr.Send(w)
+		return
+	}
+
+	var token Base.TokenInfo
+	token.Populate(req.AccessToken)
+
+	if !token.CheckExpTime(){
+		Base.TokenTimeOutApiErr.Send(w)
+		return
+	}
+
+	comment.Comment = req.Comment
+	comment.UserId  = int(token.UserId)
+	comment.UserLectionTaskId = req.UserLectionTaskId
+
+
+	db, err := sql.Open("mysql", DBMetaAuth.GetDataSourceName(DBAddress))
+	Base.CheckErr(err)
+	defer db.Close()
+
+	var userTaskExists bool
+
+	db.QueryRow("SELECT EXISTS(SELECT 1 FROM UserLectionTask WHERE id = ?)", req.UserLectionTaskId).Scan(&userTaskExists)
+
+	if !userTaskExists {
+		Base.UserTaskNotExists.Send(w)
+		return
+	}
+
+	selectRes := db.QueryRow("SELECT LectionTask_id, Lection_id, Course_id FROM UserLectionTask WHERE id = ? AND User_id = ?", req.UserLectionTaskId, token.UserId)
+	selectRes.Scan(&comment.LectionTaskId, &comment.LectionId, &comment.CourseId)
+
+	//
+	comment.Date = time.Now().Unix()
+
+	stmt, err := db.Prepare("INSERT Comment SET comment=?, date = FROM_UNIXTIME(?), user_id=?, UserLectionTask_id=?, Lection_id=?, Course_id=?, LectionTask_id = ?")
+	Base.CheckErr(err)
+
+	res, err := stmt.Exec(comment.Comment, comment.Date, comment.UserId, comment.UserLectionTaskId, comment.LectionId, comment.CourseId, comment.LectionTaskId)
+
+	Base.CheckErr(err)
+	log.Info(res)
+
+	Base.UnmarshalAndSend(w, comment)
+}
 

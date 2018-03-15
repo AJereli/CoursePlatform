@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b7ef18c-cba2-419c-b776-8103b6693a3e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/TestApi/Lection_test.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/TestApi/User_test.go" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Auth/AuthHandlers.go" afterPath="$PROJECT_DIR$/Auth/AuthHandlers.go" />
-      <change beforePath="$PROJECT_DIR$/Base/Base.go" afterPath="$PROJECT_DIR$/Base/Base.go" />
+      <change beforePath="$PROJECT_DIR$/Base/Entities.go" afterPath="$PROJECT_DIR$/Base/Entities.go" />
       <change beforePath="$PROJECT_DIR$/Base/Errors.go" afterPath="$PROJECT_DIR$/Base/Errors.go" />
+      <change beforePath="$PROJECT_DIR$/Base/Token.go" afterPath="$PROJECT_DIR$/Base/Token.go" />
       <change beforePath="$PROJECT_DIR$/Entities.go" afterPath="$PROJECT_DIR$/Entities.go" />
       <change beforePath="$PROJECT_DIR$/Handlers.go" afterPath="$PROJECT_DIR$/Handlers.go" />
       <change beforePath="$PROJECT_DIR$/Router.go" afterPath="$PROJECT_DIR$/Router.go" />
-      <change beforePath="$PROJECT_DIR$/TestApi/Base.go" afterPath="$PROJECT_DIR$/TestApi/Base.go" />
-      <change beforePath="$PROJECT_DIR$/TestApi/CourseTask_test.go" afterPath="$PROJECT_DIR$/TestApi/CourseTask_test.go" />
-      <change beforePath="$PROJECT_DIR$/TestApi/Course_test.go" afterPath="$PROJECT_DIR$/TestApi/Course_test.go" />
-      <change beforePath="$PROJECT_DIR$/Util.go" afterPath="$PROJECT_DIR$/Util.go" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,144 +24,90 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Handlers.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Handlers.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Handlers.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="345" column="41" lean-forward="false" selection-start-line="345" selection-start-column="41" selection-end-line="345" selection-end-column="41" />
+            <state relative-caret-position="730">
+              <caret line="525" column="0" lean-forward="false" selection-start-line="525" selection-start-column="0" selection-end-line="525" selection-end-column="0" />
               <folding>
-                <element signature="e#14#156#0" expanded="true" />
-                <marker date="1521041287000" expanded="true" signature="628:678" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="642:677" ph="SELECT 1 FRO... course" />
-                <marker date="1521041287000" expanded="true" signature="1235:1283" ph="SELECT id, n... course" />
-                <marker date="1521041287000" expanded="true" signature="1770:1818" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="1784:1817" ph="SELECT 1 FRO... course" />
-                <marker date="1521041287000" expanded="true" signature="1961:2015" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="1975:2014" ph="SELECT 1 FRO... CourseTask" />
-                <marker date="1521041287000" expanded="true" signature="2441:2481" ph="SELECT id FR... CourseTask" />
-                <marker date="1521041287000" expanded="true" signature="2974:3022" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="2988:3021" ph="SELECT 1 FRO... course" />
-                <marker date="1521041287000" expanded="true" signature="3167:3196" ph="SELECT id, t... course" />
-                <marker date="1521041287000" expanded="true" signature="3167:3206" ph="SELECT id, t... CourseTask" />
-                <marker date="1521041287000" expanded="true" signature="3167:3224" ph="SELECT id, t... CourseTask" />
-                <marker date="1521041287000" expanded="true" signature="3873:3924" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="3887:3923" ph="SELECT 1 FRO... lection" />
-                <marker date="1521041287000" expanded="true" signature="4477:4514" ph="SELECT id FR... Lection" />
-                <marker date="1521041287000" expanded="true" signature="5012:5060" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="5026:5059" ph="SELECT 1 FRO... course" />
-                <marker date="1521041287000" expanded="true" signature="5205:5291" ph="SELECT id, n... Lection" />
-                <marker date="1521041287000" expanded="true" signature="5800:5849" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="5814:5848" ph="SELECT 1 FRO... course" />
-                <marker date="1521041287000" expanded="true" signature="6000:6055" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="6014:6054" ph="SELECT 1 FRO... LectionTask" />
-                <marker date="1521041287000" expanded="true" signature="6593:6633" ph="SELECT id FR... CourseTask" />
-                <marker date="1521041287000" expanded="true" signature="7055:7104" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="7069:7103" ph="SELECT 1 FRO... course" />
-                <marker date="1521041287000" expanded="true" signature="7252:7359" ph="SELECT id, t... CourseTask" />
-                <marker date="1521041287000" expanded="true" signature="7908:7985" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="7922:7968" ph="SELECT 1 FRO... UserLectionTask" />
-                <marker date="1521041287000" expanded="true" signature="7922:7984" ph="SELECT 1 FRO... UserLectionTask" />
-                <marker date="1521041287000" expanded="true" signature="8138:8189" ph="SELECT isTes... LectionTask" />
-                <marker date="1521041287000" expanded="true" signature="8834:8881" ph="SELECT id FR... CourseTask" />
-                <marker date="1521041287000" expanded="true" signature="8834:8897" ph="SELECT id FR... UserLectionTask" />
-                <marker date="1521041287000" expanded="true" signature="9407:9464" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="9421:9463" ph="SELECT 1 FRO... UserLectionTask" />
-                <marker date="1521041287000" expanded="true" signature="9618:9753" ph="SELECT id, m... UserLectionTask" />
-                <marker date="1521041287000" expanded="true" signature="10448:10505" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="10462:10504" ph="SELECT 1 FRO... UserLectionTask" />
-                <marker date="1521041287000" expanded="true" signature="10667:10715" ph="UPDATE UserLectionTask... " />
-                <marker date="1521041287000" expanded="true" signature="11237:11290" ph="SELECT EXIST... " />
-                <marker date="1521041287000" expanded="true" signature="11251:11289" ph="SELECT 1 FRO... LectionTask" />
-                <marker date="1521041287000" expanded="true" signature="11447:11546" ph="SELECT id, t... LectionTask" />
+                <element signature="e#14#164#0" expanded="true" />
+                <marker date="1521119805000" expanded="true" signature="636:686" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="650:685" ph="SELECT 1 FRO... course" />
+                <marker date="1521119805000" expanded="true" signature="1243:1291" ph="SELECT id, n... course" />
+                <marker date="1521119805000" expanded="true" signature="1778:1826" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="1792:1825" ph="SELECT 1 FRO... course" />
+                <marker date="1521119805000" expanded="true" signature="1969:2023" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="1983:2022" ph="SELECT 1 FRO... CourseTask" />
+                <marker date="1521119805000" expanded="true" signature="2449:2489" ph="SELECT id FR... CourseTask" />
+                <marker date="1521119805000" expanded="true" signature="2982:3030" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="2996:3029" ph="SELECT 1 FRO... course" />
+                <marker date="1521119805000" expanded="true" signature="3175:3204" ph="SELECT id, t... course" />
+                <marker date="1521119805000" expanded="true" signature="3175:3214" ph="SELECT id, t... CourseTask" />
+                <marker date="1521119805000" expanded="true" signature="3175:3232" ph="SELECT id, t... CourseTask" />
+                <marker date="1521119805000" expanded="true" signature="3881:3932" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="3895:3931" ph="SELECT 1 FRO... lection" />
+                <marker date="1521119805000" expanded="true" signature="4485:4522" ph="SELECT id FR... Lection" />
+                <marker date="1521119805000" expanded="true" signature="5020:5068" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="5034:5067" ph="SELECT 1 FRO... course" />
+                <marker date="1521119805000" expanded="true" signature="5213:5299" ph="SELECT id, n... Lection" />
+                <marker date="1521119805000" expanded="true" signature="5808:5857" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="5822:5856" ph="SELECT 1 FRO... course" />
+                <marker date="1521119805000" expanded="true" signature="6008:6063" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="6022:6062" ph="SELECT 1 FRO... LectionTask" />
+                <marker date="1521119805000" expanded="true" signature="6601:6641" ph="SELECT id FR... CourseTask" />
+                <marker date="1521119805000" expanded="true" signature="7063:7112" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="7077:7111" ph="SELECT 1 FRO... course" />
+                <marker date="1521119805000" expanded="true" signature="7260:7367" ph="SELECT id, t... CourseTask" />
+                <marker date="1521119805000" expanded="true" signature="7916:7993" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="7930:7976" ph="SELECT 1 FRO... UserLectionTask" />
+                <marker date="1521119805000" expanded="true" signature="7930:7992" ph="SELECT 1 FRO... UserLectionTask" />
+                <marker date="1521119805000" expanded="true" signature="8146:8197" ph="SELECT isTes... LectionTask" />
+                <marker date="1521119805000" expanded="true" signature="8842:8889" ph="SELECT id FR... CourseTask" />
+                <marker date="1521119805000" expanded="true" signature="8842:8905" ph="SELECT id FR... UserLectionTask" />
+                <marker date="1521119805000" expanded="true" signature="9415:9472" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="9429:9471" ph="SELECT 1 FRO... UserLectionTask" />
+                <marker date="1521119805000" expanded="true" signature="9626:9761" ph="SELECT id, m... UserLectionTask" />
+                <marker date="1521119805000" expanded="true" signature="10456:10513" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="10470:10512" ph="SELECT 1 FRO... UserLectionTask" />
+                <marker date="1521119805000" expanded="true" signature="10675:10723" ph="UPDATE UserLectionTask... " />
+                <marker date="1521119805000" expanded="true" signature="11245:11298" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="11259:11297" ph="SELECT 1 FRO... LectionTask" />
+                <marker date="1521119805000" expanded="true" signature="11455:11554" ph="SELECT id, t... LectionTask" />
+                <marker date="1521119805000" expanded="true" signature="12502:12559" ph="SELECT EXIST... " />
+                <marker date="1521119805000" expanded="true" signature="12516:12558" ph="SELECT 1 FRO... UserLectionTask" />
+                <marker date="1521119805000" expanded="true" signature="12703:12797" ph="SELECT Lecti... UserLectionTask" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Router.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Router.go">
+      <file leaf-file-name="Token.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base/Token.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-882">
-              <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+            <state relative-caret-position="360">
+              <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
-                <element signature="e#14#93#0" expanded="true" />
+                <element signature="e#15#71#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DB.go">
+      <file leaf-file-name="Base.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base/Base.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="555">
+              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lection_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestApi/Lection_test.go">
+      <file leaf-file-name="Entities.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Base/Entities.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
-              <folding>
-                <element signature="e#17#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestApi/User_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <element signature="e#17#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Entities.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Entities.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Util.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Util.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-807">
-              <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state relative-caret-position="60">
+              <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -175,13 +116,25 @@
       <file leaf-file-name="AuthHandlers.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Auth/AuthHandlers.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="92" column="1" lean-forward="true" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
+            <state relative-caret-position="1080">
+              <caret line="80" column="129" lean-forward="false" selection-start-line="80" selection-start-column="129" selection-end-line="80" selection-end-column="129" />
               <folding>
-                <marker date="1521039929000" expanded="true" signature="586:634" ph="SELECT EXIST... " />
-                <marker date="1521039929000" expanded="true" signature="600:633" ph="SELECT 1 FRO... users" />
-                <marker date="1521039929000" expanded="true" signature="1453:1493" ph="SELECT passw... users" />
-                <marker date="1521039929000" expanded="true" signature="1626:1673" ph="UPDATE users... " />
+                <marker date="1521107743000" expanded="true" signature="586:634" ph="SELECT EXIST... " />
+                <marker date="1521107743000" expanded="true" signature="600:633" ph="SELECT 1 FRO... users" />
+                <marker date="1521107743000" expanded="true" signature="1453:1503" ph="SELECT passw... users" />
+                <marker date="1521107743000" expanded="true" signature="1653:1700" ph="UPDATE users... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Comment_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestApi/Comment_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+              <folding>
+                <element signature="e#17#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,9 +160,6 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response1.json" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -222,10 +172,7 @@
         <option value="$PROJECT_DIR$/Auth/Token.go" />
         <option value="$PROJECT_DIR$/Base/Base.go" />
         <option value="$PROJECT_DIR$/Base/Logger.go" />
-        <option value="$PROJECT_DIR$/Base/Util.go" />
-        <option value="$PROJECT_DIR$/Base/Token.go" />
         <option value="$PROJECT_DIR$/Auth/Router.go" />
-        <option value="$PROJECT_DIR$/Base/Entities.go" />
         <option value="$PROJECT_DIR$/DB.go" />
         <option value="$PROJECT_DIR$/Auth/AuthDB.go" />
         <option value="$PROJECT_DIR$/server.go" />
@@ -237,19 +184,23 @@
         <option value="$PROJECT_DIR$/ApiTests/AddCourseTest.go" />
         <option value="$PROJECT_DIR$/TestApi/TestAddCourse.go" />
         <option value="$PROJECT_DIR$/TestApi/AddCourse_test.go" />
-        <option value="$PROJECT_DIR$/Base/Errors.go" />
         <option value="$PROJECT_DIR$/Util.go" />
-        <option value="$PROJECT_DIR$/Router.go" />
         <option value="$PROJECT_DIR$/TestApi/Base.go" />
         <option value="$PROJECT_DIR$/TestApi/Course_test.go" />
         <option value="$PROJECT_DIR$/TestApi/CourseTask_test.go" />
         <option value="$PROJECT_DIR$/TestApi/Lection_test.go" />
-        <option value="$PROJECT_DIR$/Auth/AuthHandlers.go" />
         <option value="$PROJECT_DIR$/TestApi/User_test.go" />
         <option value="$PROJECT_DIR$/Handlers/DB.go" />
         <option value="$PROJECT_DIR$/Handlers/Course.go" />
-        <option value="$PROJECT_DIR$/Handlers.go" />
+        <option value="$PROJECT_DIR$/Base/Errors.go" />
+        <option value="$PROJECT_DIR$/Router.go" />
         <option value="$PROJECT_DIR$/Entities.go" />
+        <option value="$PROJECT_DIR$/Base/Util.go" />
+        <option value="$PROJECT_DIR$/Base/Entities.go" />
+        <option value="$PROJECT_DIR$/Auth/AuthHandlers.go" />
+        <option value="$PROJECT_DIR$/Base/Token.go" />
+        <option value="$PROJECT_DIR$/TestApi/Comment_test.go" />
+        <option value="$PROJECT_DIR$/Handlers.go" />
       </list>
     </option>
   </component>
@@ -446,24 +397,24 @@
     <frame x="0" y="23" width="1920" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25772098" sideWeight="0.49407783" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2550586" sideWeight="0.49407783" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2550586" sideWeight="0.50592214" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39909297" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -480,117 +431,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Auth/AuthHandlers.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <marker date="1521039929000" expanded="true" signature="586:634" ph="SELECT EXIST... " />
-            <marker date="1521039929000" expanded="true" signature="600:633" ph="SELECT 1 FRO... users" />
-            <marker date="1521039929000" expanded="true" signature="1453:1493" ph="SELECT passw... users" />
-            <marker date="1521039929000" expanded="true" signature="1626:1673" ph="UPDATE users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#121#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/AuthHandlers.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <marker date="1521039929000" expanded="true" signature="586:634" ph="SELECT EXIST... " />
-            <marker date="1521039929000" expanded="true" signature="600:633" ph="SELECT 1 FRO... users" />
-            <marker date="1521039929000" expanded="true" signature="1453:1493" ph="SELECT passw... users" />
-            <marker date="1521039929000" expanded="true" signature="1626:1673" ph="UPDATE users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Entities.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/AuthDB.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Base.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="e#14#70#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Token.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Util.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/net/url/url.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="978" column="0" lean-forward="false" selection-start-line="978" selection-start-column="0" selection-end-line="978" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/reflect/value.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="1656" column="0" lean-forward="false" selection-start-line="1656" selection-start-column="0" selection-end-line="1656" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CoursePlatform.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -602,14 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Token.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -631,9 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="54" column="18" lean-forward="false" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-          <folding>
-            <element signature="e#14#70#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -655,7 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,15 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="1918" column="0" lean-forward="false" selection-start-line="1918" selection-start-column="0" selection-end-line="1918" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Util.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,9 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="e#14#53#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -689,23 +510,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApiTests.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiTests.go" />
     <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/io/io.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="360" column="5" lean-forward="false" selection-start-line="360" selection-start-column="5" selection-end-line="360" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,7 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,7 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="489" column="41" lean-forward="true" selection-start-line="489" selection-start-column="41" selection-end-line="489" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,7 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,7 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-479">
           <caret line="764" column="39" lean-forward="false" selection-start-line="764" selection-start-column="39" selection-end-line="764" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -749,37 +557,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Base.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/database/sql/sql.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="2444" column="16" lean-forward="false" selection-start-line="2444" selection-start-column="16" selection-end-line="2444" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Errors.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestApi/Base.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-310">
           <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding>
-            <element signature="e#17#101#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -787,9 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="e#17#37#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,48 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Util.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Entities.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/AuthHandlers.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="92" column="1" lean-forward="true" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
-          <folding>
-            <marker date="1521039929000" expanded="true" signature="586:634" ph="SELECT EXIST... " />
-            <marker date="1521039929000" expanded="true" signature="600:633" ph="SELECT 1 FRO... users" />
-            <marker date="1521039929000" expanded="true" signature="1453:1493" ph="SELECT passw... users" />
-            <marker date="1521039929000" expanded="true" signature="1626:1673" ph="UPDATE users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestApi/Lection_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#17#33#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -846,7 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-807">
           <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,17 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-882">
-          <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-          <folding>
-            <element signature="e#14#93#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -872,24 +596,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Handlers/Course.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Handlers/Course.go" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -899,69 +614,237 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auth/Util.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestApi/Lection_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base/Util.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base/Errors.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Router.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="104" column="6" lean-forward="true" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/strings/strings_amd64.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/strings/strings.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="293" column="0" lean-forward="false" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/encoding/json/stream.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/dgrijalva/jwt-go/signing_method.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/dgrijalva/jwt-go/parser.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/runtime/iface.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/runtime/asm_amd64.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="508" column="0" lean-forward="false" selection-start-line="508" selection-start-column="0" selection-end-line="508" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/dgrijalva/jwt-go/token.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entities.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base/Base.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base/Entities.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auth/AuthHandlers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="80" column="129" lean-forward="false" selection-start-line="80" selection-start-column="129" selection-end-line="80" selection-end-column="129" />
+          <folding>
+            <marker date="1521107743000" expanded="true" signature="586:634" ph="SELECT EXIST... " />
+            <marker date="1521107743000" expanded="true" signature="600:633" ph="SELECT 1 FRO... users" />
+            <marker date="1521107743000" expanded="true" signature="1453:1503" ph="SELECT passw... users" />
+            <marker date="1521107743000" expanded="true" signature="1653:1700" ph="UPDATE users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/gorilla/mux/context_native.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="590" column="0" lean-forward="true" selection-start-line="590" selection-start-column="0" selection-end-line="590" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestApi/Comment_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding>
             <element signature="e#17#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Handlers.go">
+    <entry file="file://$PROJECT_DIR$/Base/Token.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="345" column="41" lean-forward="false" selection-start-line="345" selection-start-column="41" selection-end-line="345" selection-end-column="41" />
+        <state relative-caret-position="360">
+          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
-            <element signature="e#14#156#0" expanded="true" />
-            <marker date="1521041287000" expanded="true" signature="628:678" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="642:677" ph="SELECT 1 FRO... course" />
-            <marker date="1521041287000" expanded="true" signature="1235:1283" ph="SELECT id, n... course" />
-            <marker date="1521041287000" expanded="true" signature="1770:1818" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="1784:1817" ph="SELECT 1 FRO... course" />
-            <marker date="1521041287000" expanded="true" signature="1961:2015" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="1975:2014" ph="SELECT 1 FRO... CourseTask" />
-            <marker date="1521041287000" expanded="true" signature="2441:2481" ph="SELECT id FR... CourseTask" />
-            <marker date="1521041287000" expanded="true" signature="2974:3022" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="2988:3021" ph="SELECT 1 FRO... course" />
-            <marker date="1521041287000" expanded="true" signature="3167:3196" ph="SELECT id, t... course" />
-            <marker date="1521041287000" expanded="true" signature="3167:3206" ph="SELECT id, t... CourseTask" />
-            <marker date="1521041287000" expanded="true" signature="3167:3224" ph="SELECT id, t... CourseTask" />
-            <marker date="1521041287000" expanded="true" signature="3873:3924" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="3887:3923" ph="SELECT 1 FRO... lection" />
-            <marker date="1521041287000" expanded="true" signature="4477:4514" ph="SELECT id FR... Lection" />
-            <marker date="1521041287000" expanded="true" signature="5012:5060" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="5026:5059" ph="SELECT 1 FRO... course" />
-            <marker date="1521041287000" expanded="true" signature="5205:5291" ph="SELECT id, n... Lection" />
-            <marker date="1521041287000" expanded="true" signature="5800:5849" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="5814:5848" ph="SELECT 1 FRO... course" />
-            <marker date="1521041287000" expanded="true" signature="6000:6055" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="6014:6054" ph="SELECT 1 FRO... LectionTask" />
-            <marker date="1521041287000" expanded="true" signature="6593:6633" ph="SELECT id FR... CourseTask" />
-            <marker date="1521041287000" expanded="true" signature="7055:7104" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="7069:7103" ph="SELECT 1 FRO... course" />
-            <marker date="1521041287000" expanded="true" signature="7252:7359" ph="SELECT id, t... CourseTask" />
-            <marker date="1521041287000" expanded="true" signature="7908:7985" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="7922:7968" ph="SELECT 1 FRO... UserLectionTask" />
-            <marker date="1521041287000" expanded="true" signature="7922:7984" ph="SELECT 1 FRO... UserLectionTask" />
-            <marker date="1521041287000" expanded="true" signature="8138:8189" ph="SELECT isTes... LectionTask" />
-            <marker date="1521041287000" expanded="true" signature="8834:8881" ph="SELECT id FR... CourseTask" />
-            <marker date="1521041287000" expanded="true" signature="8834:8897" ph="SELECT id FR... UserLectionTask" />
-            <marker date="1521041287000" expanded="true" signature="9407:9464" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="9421:9463" ph="SELECT 1 FRO... UserLectionTask" />
-            <marker date="1521041287000" expanded="true" signature="9618:9753" ph="SELECT id, m... UserLectionTask" />
-            <marker date="1521041287000" expanded="true" signature="10448:10505" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="10462:10504" ph="SELECT 1 FRO... UserLectionTask" />
-            <marker date="1521041287000" expanded="true" signature="10667:10715" ph="UPDATE UserLectionTask... " />
-            <marker date="1521041287000" expanded="true" signature="11237:11290" ph="SELECT EXIST... " />
-            <marker date="1521041287000" expanded="true" signature="11251:11289" ph="SELECT 1 FRO... LectionTask" />
-            <marker date="1521041287000" expanded="true" signature="11447:11546" ph="SELECT id, t... LectionTask" />
+            <element signature="e#15#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Entities.go">
+    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/database/sql/sql.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="1385" column="0" lean-forward="false" selection-start-line="1385" selection-start-column="0" selection-end-line="1385" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9.4/libexec/src/time/time.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="1096" column="0" lean-forward="false" selection-start-line="1096" selection-start-column="0" selection-end-line="1096" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Handlers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="525" column="0" lean-forward="false" selection-start-line="525" selection-start-column="0" selection-end-line="525" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#164#0" expanded="true" />
+            <marker date="1521119805000" expanded="true" signature="636:686" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="650:685" ph="SELECT 1 FRO... course" />
+            <marker date="1521119805000" expanded="true" signature="1243:1291" ph="SELECT id, n... course" />
+            <marker date="1521119805000" expanded="true" signature="1778:1826" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="1792:1825" ph="SELECT 1 FRO... course" />
+            <marker date="1521119805000" expanded="true" signature="1969:2023" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="1983:2022" ph="SELECT 1 FRO... CourseTask" />
+            <marker date="1521119805000" expanded="true" signature="2449:2489" ph="SELECT id FR... CourseTask" />
+            <marker date="1521119805000" expanded="true" signature="2982:3030" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="2996:3029" ph="SELECT 1 FRO... course" />
+            <marker date="1521119805000" expanded="true" signature="3175:3204" ph="SELECT id, t... course" />
+            <marker date="1521119805000" expanded="true" signature="3175:3214" ph="SELECT id, t... CourseTask" />
+            <marker date="1521119805000" expanded="true" signature="3175:3232" ph="SELECT id, t... CourseTask" />
+            <marker date="1521119805000" expanded="true" signature="3881:3932" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="3895:3931" ph="SELECT 1 FRO... lection" />
+            <marker date="1521119805000" expanded="true" signature="4485:4522" ph="SELECT id FR... Lection" />
+            <marker date="1521119805000" expanded="true" signature="5020:5068" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="5034:5067" ph="SELECT 1 FRO... course" />
+            <marker date="1521119805000" expanded="true" signature="5213:5299" ph="SELECT id, n... Lection" />
+            <marker date="1521119805000" expanded="true" signature="5808:5857" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="5822:5856" ph="SELECT 1 FRO... course" />
+            <marker date="1521119805000" expanded="true" signature="6008:6063" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="6022:6062" ph="SELECT 1 FRO... LectionTask" />
+            <marker date="1521119805000" expanded="true" signature="6601:6641" ph="SELECT id FR... CourseTask" />
+            <marker date="1521119805000" expanded="true" signature="7063:7112" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="7077:7111" ph="SELECT 1 FRO... course" />
+            <marker date="1521119805000" expanded="true" signature="7260:7367" ph="SELECT id, t... CourseTask" />
+            <marker date="1521119805000" expanded="true" signature="7916:7993" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="7930:7976" ph="SELECT 1 FRO... UserLectionTask" />
+            <marker date="1521119805000" expanded="true" signature="7930:7992" ph="SELECT 1 FRO... UserLectionTask" />
+            <marker date="1521119805000" expanded="true" signature="8146:8197" ph="SELECT isTes... LectionTask" />
+            <marker date="1521119805000" expanded="true" signature="8842:8889" ph="SELECT id FR... CourseTask" />
+            <marker date="1521119805000" expanded="true" signature="8842:8905" ph="SELECT id FR... UserLectionTask" />
+            <marker date="1521119805000" expanded="true" signature="9415:9472" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="9429:9471" ph="SELECT 1 FRO... UserLectionTask" />
+            <marker date="1521119805000" expanded="true" signature="9626:9761" ph="SELECT id, m... UserLectionTask" />
+            <marker date="1521119805000" expanded="true" signature="10456:10513" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="10470:10512" ph="SELECT 1 FRO... UserLectionTask" />
+            <marker date="1521119805000" expanded="true" signature="10675:10723" ph="UPDATE UserLectionTask... " />
+            <marker date="1521119805000" expanded="true" signature="11245:11298" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="11259:11297" ph="SELECT 1 FRO... LectionTask" />
+            <marker date="1521119805000" expanded="true" signature="11455:11554" ph="SELECT id, t... LectionTask" />
+            <marker date="1521119805000" expanded="true" signature="12502:12559" ph="SELECT EXIST... " />
+            <marker date="1521119805000" expanded="true" signature="12516:12558" ph="SELECT 1 FRO... UserLectionTask" />
+            <marker date="1521119805000" expanded="true" signature="12703:12797" ph="SELECT Lecti... UserLectionTask" />
+          </folding>
         </state>
       </provider>
     </entry>
